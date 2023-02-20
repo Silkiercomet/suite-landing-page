@@ -1,0 +1,190 @@
+@import "https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap";
+:root {
+  --clr-dark-blue: hsl(219, 43%, 16%);
+  --clr-blue: hsl(218, 20%, 38%);
+  --clr-gray: hsl(30, 33%, 93%);
+  --clr-light-gray: hsl(30, 29%, 97%);
+  --clr-violet: hsl(264, 100%, 69%);
+  --clr-pink: hsl(292, 76%, 54%);
+  --clr-orange: hsl(31, 100%, 65%);
+  --bg-button: linear-gradient(
+    135deg,
+    #a060ff 0%,
+    #cb30e3 49.21%,
+    #ffa84e 100%
+  );
+  --ff-primary: "Epilogue", sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--ff-primary);
+  background-color: var(--clr-light-gray);
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.padded {
+  padding: 30px 25px;
+}
+.btn {
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: var(--fw-700);
+  border-radius: 8px;
+}
+/* navigation */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .btn {
+  border: 1.5px solid var(--clr-dark-blue);
+  color: var(--clr-dark-blue);
+}
+
+/* navigation */
+
+/* hero */
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.hero__text h1 {
+  font-weight: var(--fw-400);
+  color: var(--clr-dark-blue);
+  font-size: 2.375rem;
+}
+.hero__text h1 > span {
+  position: relative;
+  font-weight: var(--fw-700);
+}
+.hero__text h1 > span:nth-child(2) img {
+  position: absolute;
+  top: -33px;
+  left: -5px;
+}
+.hero__text p {
+  color: var(--clr-blue);
+}
+.hero__text .btn {
+  background-color: var(--clr-dark-blue);
+  max-width: fit-content;
+  color: white;
+}
+
+.hero__illustration {
+  background-image: url(../assets/image-hero-landscape.webp);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  height: 340px;
+  width: 100%;
+}
+/* hero */
+
+/* details section */
+.details {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  place-items: center;
+}
+.details > * {
+  text-align: center;
+}
+.details > li p:nth-child(1) {
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--clr-dark-blue);
+}
+.details > li p:nth-child(2) {
+  color: var(--clr-blue);
+}
+
+/* details section */
+
+/* testimonies */
+
+.testimonies, .testimonies__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.testimonies{
+  background-color: var(--clr-dark-blue);
+  border-radius: 10px;
+  padding-block: 35px;
+}
+
+.testimonies__text{
+  text-align: center;
+}
+.testimonies__text h2{
+  color: var(--clr-gray);
+  font-weight: 400;
+  font-size: 35px;
+}
+.testimonies__text h2 span{
+  font-weight: 700;
+}
+
+/* testimonies */
