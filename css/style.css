@@ -83,6 +83,7 @@ h6 {
   font-weight: var(--fw-700);
   border-radius: 8px;
 }
+
 /* navigation */
 
 .nav {
@@ -173,9 +174,18 @@ h6 {
   background-color: var(--clr-dark-blue);
   border-radius: 10px;
   padding-block: 35px;
+  position: relative;
+  margin-top: 200px;
 }
 
 .testimonies__text{
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 28px;
+
   text-align: center;
 }
 .testimonies__text h2{
@@ -186,5 +196,46 @@ h6 {
 .testimonies__text h2 span{
   font-weight: 700;
 }
+.testimonies__text_para{
+  color: var(--clr-blue);
+  padding: 0 20px;
+}
+.testimonies__text_name p:nth-child(1){
+  font-weight: 700;
+  color: var(--clr-light-gray);
+}
+.testimonies__text_name p:nth-child(2){
+  color: var(--clr-blue);
+}
+.testimonies__illustration{
+  position: absolute;
+  top: -200px;
+  background-image: url(../assets/image-jeremy-small.webp);
+  height: 400px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* testimonies */
+
+/* footer */
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 25px;
+}
+.footer__icons{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  column-gap: 25px;
+}
+.footer__icons > *{
+  cursor: pointer;
+}
+
+/* footer */
