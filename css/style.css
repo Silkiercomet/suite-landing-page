@@ -239,3 +239,49 @@ footer{
 }
 
 /* footer */
+
+@media screen and (min-width:756px) {
+  /* hero */
+  .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 573px;
+  }
+.hero__text {
+  position: relative;
+  z-index: 1;
+  margin-right: 34%;
+
+}
+.hero__text h1 {
+  font-size: 3.375rem;
+}
+.hero__text p{
+  margin-right:16%;
+}
+.hero__illustration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 50%;
+  z-index: 0;
+  background-image: url(../assets/image-hero-portrait.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  height: 573px;
+  width: 50%;
+}
+/* hero */
+.details {
+  list-style: none;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 50px ;
+}
+}
