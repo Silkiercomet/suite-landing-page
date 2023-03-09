@@ -83,6 +83,7 @@ h6 {
   font-weight: var(--fw-700);
   border-radius: 8px;
 }
+
 /* navigation */
 
 .nav {
@@ -102,6 +103,7 @@ h6 {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  margin-bottom: 25px;
 }
 .hero__text h1 {
   font-weight: var(--fw-400);
@@ -159,23 +161,35 @@ h6 {
 /* details section */
 
 /* testimonies */
+ .testimonies__text{
 
-.testimonies, .testimonies__text{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-
 }
 
 .testimonies{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--clr-dark-blue);
   border-radius: 10px;
   padding-block: 35px;
+  position: relative;
+  margin-top: 200px;
 }
 
 .testimonies__text{
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 28px;
+
   text-align: center;
 }
 .testimonies__text h2{
@@ -186,5 +200,189 @@ h6 {
 .testimonies__text h2 span{
   font-weight: 700;
 }
+.testimonies__text_para{
+  color: var(--clr-blue);
+  padding: 0 20px;
+}
+.testimonies__text_name p:nth-child(1){
+  font-weight: 700;
+  color: var(--clr-light-gray);
+}
+.testimonies__text_name p:nth-child(2){
+  color: var(--clr-blue);
+}
+.testimonies__illustration{
+  position: absolute;
+  top: -200px;
+  background-image: url(../assets/image-jeremy-small.webp);
+  min-height: 400px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 99;
+
+}
+.testimonies::before{
+  content: "";
+  position: absolute;
+
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: 150px;
+  height: 150px;
+  background-color: hsla(292, 76%, 54%,0.9);
+  -webkit-box-shadow: 0px 0px 65px 41px var(--clr-pink);
+  -moz-box-shadow: 0px 0px 65px 41px var(--clr-pink);
+  box-shadow: 0px 0px 65px 41px var(--clr-pink);
+  border-radius: 50%;
+
+}
 
 /* testimonies */
+
+/* footer */
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 25px;
+}
+.footer__icons{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  column-gap: 25px;
+}
+.footer__icons > *{
+  cursor: pointer;
+}
+
+/* footer */
+
+@media screen and (min-width:756px) {
+  /* hero */
+  .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 573px;
+  }
+.hero__text {
+  position: relative;
+  z-index: 1;
+  margin-right: 34%;
+
+}
+.hero__text h1 {
+  font-size: 3.375rem;
+}
+.hero__text p{
+  margin-right:16%;
+}
+.hero__illustration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 50%;
+  z-index: 0;
+  background-image: url(../assets/image-hero-portrait.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  height: 573px;
+  width: 50%;
+}
+/* hero */
+.details {
+  list-style: none;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 50px ;
+}
+.testimonies{
+  margin-inline: 25px;
+}
+.testimonies__text_para{
+  padding-inline: 40px;
+}
+}
+@media screen and (min-width:1250px) {
+  body{
+    max-width: 1300px;
+    margin-inline: auto;
+  }
+  main{
+    display: grid;
+
+  }
+  .hero{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .details{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    flex-direction: column;
+
+  }
+  .testimonies{
+ flex-direction: row;
+    padding-block: 0;
+    overflow-y: visible;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    max-height: 500px;
+  }
+  .testimonies__text{
+    margin-top: 0;
+
+  }
+  .testimonies__illustration{
+    background-image: url(../assets/image-jeremy-large.png);
+    position: relative;
+    top: -45px;
+    min-height: 590px;
+  }
+  .hero__text p{
+    max-width: 35ch;
+  }
+  .hero__text{
+    margin-right: 25%;
+  }
+  .hero__illustration{
+    background-image: url(../assets/image-hero-portrait@2x.png);
+    left: 45%;
+  }
+  .hero__text h1{
+    max-width: 17ch;
+    font-size: 4rem;
+  }
+  .testimonies{
+    display: flex;
+  }
+  .testimonies::before{
+    content: "";
+    position: absolute;
+  
+    top: 45%;
+    left: 0;
+    right: 50%;
+    margin-inline: auto;
+    width: 200px;
+    height: 200px;
+    background-color: hsla(292, 76%, 54%,0.9);
+    -webkit-box-shadow: 0px 0px 85px 51px var(--clr-pink);
+    -moz-box-shadow: 0px 0px 85px 51px var(--clr-pink);
+    box-shadow: 0px 0px 85px 51px var(--clr-pink);
+    border-radius: 50%;
+  
+  }
+}
